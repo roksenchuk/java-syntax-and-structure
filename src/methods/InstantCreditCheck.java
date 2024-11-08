@@ -22,4 +22,16 @@ public class InstantCreditCheck {
 
         // Check if the user is qualified
     }
+
+    public static void isUserQualified(int creditScore, double salary) {
+        double requiredSalary = 25000;
+        int reqiuredCreditScore = 700;
+
+        if (creditScore >= reqiuredCreditScore && salary >= requiredSalary) {
+            System.out.println("Your credit0 is qualified");
+        }
+        else {
+            System.out.println("Your credit0 is not qualified");
+        }
+    }
 }
