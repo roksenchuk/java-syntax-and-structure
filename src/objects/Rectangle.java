@@ -18,6 +18,11 @@ public class Rectangle {
         this.width = width;
     }
 
+    // default constructor
+    public Rectangle() {
+        length = 0;
+        width = 0;
+    }
     // constructor
     public Rectangle(double length, double width) {
         this.length = length;
