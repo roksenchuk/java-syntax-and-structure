@@ -16,5 +16,20 @@ public class LetterSearch {
         scanner.close();
 
         boolean letterFound = false;
+
+        // Search text for letter A
+        for (int i = 0; i < text.length(); i++) {
+            char letter = text.charAt(i);
+            if (letter == 'A' || letter == 'a') {
+                letterFound = true;
+                break;
+            }
+        }
+
+        if (letterFound) {
+            System.out.println("No such letter");
+        } else {
+            System.out.println("Found letter");
+        }
     }
 }
