@@ -3,7 +3,8 @@ package text_processing;
 public class TextProcessor {
 
     public static void main(String[] args) {
-        countWords("I love Java");
+        // countWords("I love Java");
+        reverseString("stop");
     }
 
     /**
@@ -29,6 +30,8 @@ public class TextProcessor {
      * @param text Full string to be reversed
      */
     public static void reverseString(String text) {
-
+        for (int i = text.length() - 1; i >= 0; i--) {
+            System.out.print(text.charAt(i));
+        }
     }
 }
