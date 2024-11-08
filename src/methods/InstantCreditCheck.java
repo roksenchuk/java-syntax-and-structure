@@ -21,18 +21,27 @@ public class InstantCreditCheck {
         scanner.close();
 
         // Check if the user is qualified
-        isUserQualified(creditScore, salary);
+        boolean isQualified = isUserQualified(creditScore, salary);
+        notifyUser(isQualified);
     }
 
-    public static void isUserQualified(int creditScore, double salary) {
+    public static boolean isUserQualified(int creditScore, double salary) {
         double requiredSalary = 25000;
         int reqiuredCreditScore = 700;
 
         if (creditScore >= reqiuredCreditScore && salary >= requiredSalary) {
-            System.out.println("Your credit is qualified");
+            return true;
         }
         else {
-            System.out.println("Your credit is not qualified");
+            return false;
+        }
+    }
+
+    public static void notifyUser(boolean isQualified) {
+        if (isQualified) {
+            System.out.println("You are qualified for the loan!");
+        } else {
+            System.out.println("Sorry, you are not qualified for the loan.");
         }
     }
 }
